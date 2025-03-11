@@ -120,26 +120,24 @@ public class HomepageActivity extends AppCompatActivity {
 
 
             int shortcut = item.getItemId();
-            switch (shortcut){
-                case R.id.shortcutHome:
+                if(shortcut == R.id.shortcutHome) {
                     //setNumberOnNotificationIcon();
                     fragment = new HomeFragment();
                     fragmentTag = "homeFragment";
-                    break;
-                case R.id.shortcutNotification:
+                }
+                else if(shortcut == R.id.shortcutNotification) {
                     setNumberOnNotificationIcon();
                     fragment = new NotificationFragment();
                     fragmentTag = "notificationFragment";
-                    break;
-                case R.id.shortcutAppointment:
+                }
+                else if(shortcut == R.id.shortcutAppointment) {
                     fragment = new AppointmentpageFragment();
                     fragmentTag = "appointmentFragment";
-                    break;
-                case R.id.shortcutPersonality:
+                }
+                else if(shortcut == R.id.shortcutPersonality) {
                     fragment = new SettingsFragment();
                     fragmentTag = "settingsFragment";
-                    break;
-            }
+                }
 
             enableFragment(fragment, fragmentTag);
             return true;

@@ -28,10 +28,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Homepage.TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".Settingspage.BookingHistoryActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Bookingpage.BookingpagePhotoActivity"
             android:exported="false"
